@@ -1,42 +1,41 @@
 while True:
     try:
-        x = int(input("işlem için ilk sayıyı giriniz: "))
-        y = int(input("\nişlem için ikinci sayıyı giriniz: "))
+        x = int(input("Type the first number: "))
+        y = int(input("\nType the second:  "))
 
-        print('''toplama, çıkarma, çarpma, bölme ya da
-        çıkmak istiyorsanız çık yazın... \n''')
+        print('''add, subtract, multiply, divide 
+        or you can type exit if you want to exit...''')
         print("")
         islem = input()
 
-        if islem == "toplama":
-            print(f"\nSonuç: {x + y}")
+        if islem == "add":
+            print(f"\nResult: {x + y}")
     
-        elif islem == "çıkarma":
-            print(f"\nSonuç: {x - y}")
+        elif islem == "subtract":
+            print(f"\nResult: {x - y}")
                 
     
-        elif islem == "çarpma":
-            print(f"\nSonuç: {x * y}")
+        elif islem == "multiply":
+            print(f"\nResult: {x * y}")
     
-        elif islem == "bölme":
+        elif islem == "divide":
             if y == 0:
-                print('''\nsıfırla bölünür mü amk!
-                bidaha dene…''')
+                print('''\nHow u gonna divide with 0 dumass''')
                 continue
             else:
-                print(f"\nSonuç: {x / y}")
+                print(f"\nResult: {x / y}")
         
-        elif islem.lower() == "çık":
-            print("\nProgramdan çıkılıyor…")
+        elif islem.lower() == "exit":
+            print("\nCalculator is closing...")
             break
             
         
         
         else:
-            print("\ngeçersiz işlem amk dört islemlerden yaz")
+            print("\nINVALID OPERATION ")
             
            
 
     except ValueError:
-         print("\nLütfen geçerli bir sayı girin")
+         print("\nPlease type a valid operation")
         
